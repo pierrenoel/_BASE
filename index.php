@@ -54,7 +54,7 @@ switch ($url['path'])
         break;
 
     case '/post/update':
-            if($_POST['_METHOD'] == 'PUT')
+            if($_POST['_METHOD'] == 'PUT' && $request_method == "POST")
                 (new HomeController())->update($_POST);
         break;
 
